@@ -1,0 +1,84 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #ece2c6;
+    color: #3d2b1f;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Diseño de encabezado */
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 20px;
+}
+
+/* Navegación mejorada */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc80;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Imágenes */
+img {
+    width: 300px; /* Ajusta el tamaño según el diseño */
+    max-width: 600px; /* Para limitar imágenes grandes */
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+    opacity: 0; /* Para animación */
+    animation: fadeInImage 1.5s forwards ease-in-out;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards ease-in;
+}
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1.2s forwards ease-out;
+}
+
+.zoom-in {
+    transform: scale(0);
+    animation: zoomIn 1.2s forwards ease-in-out;
+}
+
+/* Animación de imagen */
+@keyframes fadeInImage {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
